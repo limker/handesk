@@ -14,8 +14,8 @@
 <body>
     @yield('body')
 
-    <div style="margin-top:40px">
-        Powered by <a href="https://github.com/BadChoice/handesk"><img src="http://handesk.dev/images/handesk_full.png" height="30" align="center"></a>
+    <div style="margin-top:20px">
+        Powered by <a href="https://franticape.com">Frantic 🐵 Ape</a>
     </div>
 
 </body>
