@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
+use App\Requester;
 
 class TicketCreated extends Notification implements ShouldQueue
 {
@@ -49,12 +50,13 @@ class TicketCreated extends Notification implements ShouldQueue
             ->view('emails.ticket', [
                     'title'  => __('notification.newTicketCreated'),
                     'ticket' => $this->ticket,
-                    'url'    => route('tickets.show', $this->ticket),
+                    'url'    => $notifiable instanceof Requester ? route('requester.tickets.show', $this->ticket->public_token) : route('tickets.show', $this->ticket),
                 ]
             );
-        if ($this->ticket->requester->email) {
+        // This would flag all emails with a warning.
+        /*if ($this->ticket->requester->email) {
             $mail->from($this->ticket->requester->email, $this->ticket->requester->name);
-        }
+        }*/
 
         return $mail;
     }
