@@ -2,7 +2,7 @@
 
 @section('body')
         <div style="border-bottom:1px solid #efefef; padding-bottom:10px;">
-            <span style="color:#aeaeae; font-size:12px"> {{ config('mail.fetch.replyAboveLine') }}</span><br><br>
+            <span style="color:#aeaeae; font-size:12px"> {{ __('ticket.replyAboveLine') }}</span><br><br>
             <span style="font-size:12px">{{ $title }}</span>
         </div>
 
@@ -23,7 +23,7 @@
         </div>
 
         <div style="margin-top:40px">
-            Add a comment by replying to this email or <a href="{{$url}}">view the ticket in Handesk</a>
+            {{ __('ticket.url') }} <a href="{{$url}}">{{ __('ticket.url2') }} {{ config('mail.from.name') }}</a>
         </div>
 
         <span style="color:white">ticket-id:{{$ticket->id}}.</span>

@@ -51,4 +51,7 @@ return [
     'normal'           => 'Normal',
     'high'             => 'Alta',
     'blocker'          => 'Bloqueador',
+    'url'              => 'Agrega un comentario respondiendo a este correo o',
+    'url2'             => 'revisa el ticket en',
+    'replyAboveLine'   => '##- Por favor escribe tu respuesta encima de esta línea -##',
 ];
