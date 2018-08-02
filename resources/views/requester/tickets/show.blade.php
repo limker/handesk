@@ -1,5 +1,8 @@
 @extends('layouts.requester')
 @section('content')
+    <div class="center text-center mt5" style="max-width:200px">
+        <a href="#"><img  src="{{url("/images/fa-logo-head.svg")}}" class="w80"></a>
+    </div>
     <div class="description comment">
         <h3>{{ $ticket->title }}</h3>
         <span class="label ticket-status-{{ $ticket->statusName() }}">{{ __('ticket.' . $ticket->statusName()) }}</span>&nbsp;
