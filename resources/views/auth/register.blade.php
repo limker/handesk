@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="center text-center mt5 w40">
-        <img src="{{url("images/handesk_full.png")}}" class="w40">
+        <a href="{{ route('login') }}"><img  src="{{url("/images/fa-logo-head.svg")}}" class="w40"></a>
         <p class="w60 center"> {{ __('team.invitedDesc') }}</p>
         <h3>Register</h3>
             <form class="form-horizontal" method="POST" action="{{ route('register') }}">

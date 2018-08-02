@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
         <div class="center text-center mt5" style="max-width:300px">
-            <img src="{{url("images/handesk_full.png")}}" class="w80">
+            <a href="{{ route('login') }}"><img  src="{{url("/images/fa-logo-head.svg")}}" class="w80"></a>
             <div class="panel panel-default">
                 <div class="panel-heading">Reset Password</div>
 
